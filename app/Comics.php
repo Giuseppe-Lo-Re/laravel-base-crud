@@ -11,5 +11,5 @@ class Comics extends Model
         
     }
     
-    protected $table = 'Comics_array';
+    protected $table = 'comics_array';
 }

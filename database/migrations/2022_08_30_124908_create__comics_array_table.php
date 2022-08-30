@@ -13,13 +13,13 @@ class CreateComicsArrayTable extends Migration
      */
     public function up()
     {
-        Schema::create('_comics_array', function (Blueprint $table) {
+        Schema::create('comics_array', function (Blueprint $table) {
             $table->id();
             $table->string('title', 50);
             $table->text('description');
             $table->text('thumb');
             $table->float('price', 6, 2);
-            $table->string('series', 30);
+            $table->string('series', 50);
             $table->date('sale_date');
             $table->string('type', 20);
             $table->timestamps();
