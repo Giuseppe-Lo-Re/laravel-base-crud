@@ -2,14 +2,10 @@
 
 @section('main_content')
     
-<h1>[nome prodotto]</h1>
+<h1>{{ $comics->title }}</h1>
         
 <div>
     <strong>Cover:</strong> <img src="{{ $comics->thumb }}" alt="{{ $comics->title }}">
-</div>
-
-<div>
-    <strong>Titolo:</strong> {{ $comics->title }}
 </div>
 
 <div>

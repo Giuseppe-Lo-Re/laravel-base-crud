@@ -10,10 +10,7 @@
     <div>
         <strong>Cover:</strong> <img src="{{ $comics->thumb }}" alt="{{ $comics->title }}"> <br>
         <strong>Titolo:</strong>  {{ $comics->title }} <br>
-        <strong>Descrizione:</strong> {{ $comics->description }} <br>
-        <strong>Serie:</strong>  {{ $comics->series }} <br>
-        <strong>Prezzo:</strong>  $ {{ $comics->price }} <br>
-        <strong>data uscita:</strong>  {{ date('d-m-Y', strtotime($comics->sale_date)) }} <br>
+        <a href="{{ route('comics-series.show', ['comics_series' => $comics->id]) }}">dettagli prodotto</a>
     </div>
     <br>
     @endforeach
