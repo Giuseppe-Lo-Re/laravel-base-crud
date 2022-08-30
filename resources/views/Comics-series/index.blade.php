@@ -9,7 +9,7 @@
 
     <div>
         <strong>Cover:</strong> <img src="{{ $comics->thumb }}" alt="{{ $comics->title }}"> <br>
-        <strong>Nome:</strong>  {{ $comics->title }} <br>
+        <strong>Titolo:</strong>  {{ $comics->title }} <br>
         <strong>Descrizione:</strong> {{ $comics->description }} <br>
         <strong>Serie:</strong>  {{ $comics->series }} <br>
         <strong>Prezzo:</strong>  $ {{ $comics->price }} <br>
