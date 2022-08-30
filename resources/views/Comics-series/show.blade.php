@@ -24,4 +24,8 @@
     <strong>Data uscita:</strong> {{ $comics->sale_date }}
 </div>
 
+<div>
+    <strong>Tipologia:</strong> {{ $comics->type }}
+</div>
+
 @endsection

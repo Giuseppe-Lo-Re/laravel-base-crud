@@ -12,8 +12,13 @@
             <li>
                 <a href="{{ route('home') }}">Home</a>
             </li>
+
             <li>
                 <a href="{{ route('comics-series.index') }}">Comics Series</a>
+            </li>
+
+            <li>
+                <a href="{{ route('comics-series.create') }}">Crea il tuo nuovo articolo</a>
             </li>
         </ul>
     </header>
