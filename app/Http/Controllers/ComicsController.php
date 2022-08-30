@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Comics;
 
 class ComicsController extends Controller
 {
@@ -13,7 +14,13 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        //
+        $comics_array = Comics::all();
+
+        $data = [
+            'comics_array' => $comics_array
+        ];
+
+        return view('comics-series.index', $data);
     }
 
     /**
