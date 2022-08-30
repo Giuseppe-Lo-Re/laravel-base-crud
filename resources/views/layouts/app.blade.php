@@ -7,6 +7,10 @@
     <title>laravel-base-crud</title>
 </head>
 <body>
+    <header>
+        header
+    </header>
+    
     @yield('main_content')
 </body>
 </html>
