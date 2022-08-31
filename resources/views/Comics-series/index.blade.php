@@ -10,7 +10,8 @@
     <div>
         <strong>Cover:</strong> <img src="{{ $comics->thumb }}" alt="{{ $comics->title }}"> <br>
         <strong>Titolo:</strong>  {{ $comics->title }} <br>
-        <a href="{{ route('comics-series.show', ['comics_series' => $comics->id]) }}">dettagli prodotto</a>
+        <a href="{{ route('comics-series.show', ['comics_series' => $comics->id]) }}">dettagli prodotto</a> <br>
+        <a href="{{ route('comics-series.edit', ['comics_series' => $comics->id]) }}">modifica prodotto</a>
     </div>
     <br>
     @endforeach

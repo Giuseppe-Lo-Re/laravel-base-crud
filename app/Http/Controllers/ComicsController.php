@@ -76,7 +76,13 @@ class ComicsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comics = Comics::findOrFail($id);
+
+        $data = [
+            'comics' => $comics
+        ];
+
+        return view('comics-series.edit', $data);
     }
 
     /**
@@ -88,7 +94,12 @@ class ComicsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $form_data = $request->all();
+        
+        $comics_to_update = Comics::findOrFail($id);
+        $comics_to_update->update($form_data);
+
+        return redirect()->route('comics-series.show', ['comics'=> $comics_to_update->id]);
     }
 
     /**
