@@ -14,5 +14,17 @@
         <a href="{{ route('comics-series.edit', ['comics_series' => $comics->id]) }}">modifica prodotto</a>
     </div>
     <br>
+
+    <div>
+        <form action="{{ route('comics-series.destroy', ['comics_series' => $comics->id]) }}" method='post'>
+            @csrf
+            @method('DELETE')
+            
+            <input type="submit" 
+                   value="elimina prodotto" 
+                   onClick="return confirm('Stai per eliminare il prodotto. Sei sicuro?')">
+        </form>
+    </div>
+    <br>
     @endforeach
 @endsection

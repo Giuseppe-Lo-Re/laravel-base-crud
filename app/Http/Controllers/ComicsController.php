@@ -99,7 +99,7 @@ class ComicsController extends Controller
         $comics_to_update = Comics::findOrFail($id);
         $comics_to_update->update($form_data);
 
-        return redirect()->route('comics-series.show', ['comics'=> $comics_to_update->id]);
+        return redirect()->route('comics-series.show', ['comics_series'=> $comics_to_update->id]);
     }
 
     /**
@@ -110,7 +110,10 @@ class ComicsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comics_to_delete = Comics::findOrFail($id);
+        $comics_to_delete->delete();
+
+        return redirect()->route('comics-series.index');
     }
 
     protected function getValidationRules() {
